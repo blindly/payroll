@@ -11,10 +11,10 @@ div.columns
         form#generator
           label.label Enter number of hours
           p.control
-            input.input#hours(type="number", min="0")
+            input.input#hours(type="number", min="0", required)
           label.label Enter hourly rate
           p.control
-            input.input#rate(type="number", step="0.01", min="0.01")
+            input.input#rate(type="number", step="0.01", min="0.01", required)
           p.control
             button.button.is-primary Calculate
             button.button.is-link(type="reset") Reset
