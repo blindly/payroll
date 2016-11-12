@@ -1,0 +1,68 @@
+div.columns
+  div.column.is-half
+
+    section.hero.is-primary
+      div.hero-body
+        div.container.is-fluid
+          h1.title Payroll Calculator
+
+    section.section
+      div.container.is-fluid
+        form#generator
+          label.label Enter number of hours
+          p.control
+            input.input#hours(type="number", min="0")
+          label.label Enter hourly rate
+          p.control
+            input.input#rate(type="number", step="0.01", min="0.01")
+          p.control
+            button.button.is-primary Calculate
+            button.button.is-link(type="reset") Reset
+
+
+    section.section#results
+      div.container.is-fluid
+        h1.title Results
+        table.table#table-results
+          tr
+            td 
+              b Federal Tax
+            td
+              span#federal_tax
+          tr
+            td 
+              b NC Tax
+            td
+              span#nc_tax
+          tr
+            td 
+              b Medicare Tax
+            td
+              span#medicare_tax
+          tr
+            td 
+              b Social Security Tax
+            td
+              span#social_security_tax
+          tr
+            td 
+              b Total Deductions
+            td
+              span#deductions
+          tr
+            td
+              hr
+            td
+              hr
+          tr
+            td 
+              b Gross
+            td
+              span#gross
+          tr
+            td 
+              b Net
+            td
+              span#net
+
+script(src="assets/js/payroll.js")
